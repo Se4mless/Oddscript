@@ -114,6 +114,22 @@ fn main() -> std::io::Result<()> {
                     }
                 }
             }
+            's' => {
+                if let Some(c) = clean.get(1..) {
+                    let indexes = c.split(",");
+                    let mut output = String::new();
+                    for i in indexes {
+                        if let Ok(parsed) = i.parse::<u8>() {
+                            // parsed is now a u8
+                            output.push(containers[parsed as usize] as char);
+                        } else {
+                            // handle parse error if needed
+                            
+                        }
+                    }
+                    println!("{}",output);
+                }
+            }
 
             _ => {
                 eprintln!("Error: Syntactically Incorrect Line at {}", line_index);
