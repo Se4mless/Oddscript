@@ -5,8 +5,8 @@ use std::env;
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() != 2 {
-        println!("Oddscript version 1.1.0");
+    if args.len() != 2 || args[1] == "--version" {
+        println!("Oddscript version {}",env!("CARGO_PKG_VERSION"));
         println!("Run odd ? for help");
         return Ok(());
     }
