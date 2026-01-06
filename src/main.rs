@@ -6,7 +6,7 @@ fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 2 {
-        println!("Oddscript version 1.0.0");
+        println!("Oddscript version 1.1.0");
         println!("Run odd ? for help");
         return Ok(());
     }
