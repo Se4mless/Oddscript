@@ -5,3 +5,7 @@
 ## Installation:
 - Make sure you have Cargo installed.
 - In A Terminal run `cargo install --git https://github.com/Se4mless/Oddscript.git`
+
+## Usage:
+- Create Your File using the `.odd` file-type 
+- To execute run `odd {path}` where path would be your filepath 
