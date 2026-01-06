@@ -1,0 +1,18 @@
+# Set Register 3 To 1
+> 3
+= 1
+
+# Set The Register 2 (The Loop Amount) To 24
+> 2
+= 24
+
+# Start The Loop
+> 1
+= 0
+
+? 2
++ 3
+<
+.
+
+
