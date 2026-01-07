@@ -109,10 +109,21 @@ fn main() -> std::io::Result<()> {
             }
 
             '?' => {
+                
                 if let Some(v) = value {
                     if containers[pointer] != containers[v as usize] {
                         loopstart = line_index;
                     } else {
+                        if loopstart != line_index {
+                            let index_check = line_index + 1;
+                            while index_check < lines.len() {
+                                if lines[index_check].chars().filter(|c| !c.is_whitespace()).collect::<String>() == r"." {
+                                    line_index = index_check;
+                                    break;
+                                }
+                            }
+                            
+                        }
                         loopstart = 256;
                     }
                 }
