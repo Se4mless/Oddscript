@@ -115,12 +115,13 @@ fn main() -> std::io::Result<()> {
                         loopstart = line_index;
                     } else {
                         if loopstart != line_index {
-                            let index_check = line_index + 1;
+                            let mut index_check = line_index + 1;
                             while index_check < lines.len() {
                                 if lines[index_check].chars().filter(|c| !c.is_whitespace()).collect::<String>() == r"." {
                                     line_index = index_check;
                                     break;
                                 }
+                                index_check += 1;
                             }
                             
                         }
