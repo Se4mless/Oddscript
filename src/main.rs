@@ -36,6 +36,9 @@ fn main() -> std::io::Result<()> {
         if line.is_empty() || line.starts_with('#') {
             continue;
         }
+        if line == "!" {
+            break;
+        }
 
         let clean: String = line.chars().filter(|c| !c.is_whitespace()).collect();
         if clean.is_empty() {
